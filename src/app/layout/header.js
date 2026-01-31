@@ -18,7 +18,7 @@ export default function Header({ inter }) {
         <Image src="/cict-wordmark.png" width={112} height={25} />
       </Link>
     
-      <div className="absolute left-1/2 -translate-x-1/2 flex gap-x-12 text-lg mt-1"> 
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-x-12 text-lg mt-1">
         <Link href="/programs" className={(pathname === "/programs") ? active : inactive}>
           PROGRAMS
         </Link>
