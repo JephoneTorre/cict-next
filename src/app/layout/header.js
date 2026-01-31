@@ -12,13 +12,16 @@ export default function Header({ inter }) {
   const pathname = usePathname();
 
   return (
-    <header className={`${inter.className} flex flex-row text-lg px-6 py-6 font-medium`}>
-      <Link href="/" className="flex items-center gap-x-2 ml-45">
+    <header className={`${inter.className} grid grid-cols-3 items-center px-6 py-6 text-lg font-medium`}>
+      <Link 
+        href="/" 
+        className="flex justify-center items-center gap-x-2"
+      >
         <Image src="/cict-emblem-dark.png" width={37} height={38} />
         <Image src="/cict-wordmark.png" width={112} height={25} />
       </Link>
     
-      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-x-12 text-lg mt-1">
+      <div className="hidden md:flex justify-center gap-x-12 mt-1">
         <Link href="/programs" className={(pathname === "/programs") ? active : inactive}>
           PROGRAMS
         </Link>
