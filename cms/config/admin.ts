@@ -1,3 +1,21 @@
+// Function to generate preview pathname based on content type and document
+const getPreviewPathname = (uid, { locale, document }): string => {
+  const { slug, documentId } = document
+
+  // Handle different content types with their specific URL patterns
+  switch (uid) {
+    case 'api::post.post': {
+      if (!documentId) {
+        return '/' // Fallback to homepage if no documentId
+      }
+      return `/${documentId}` // Individual blog post page
+    }
+    default: {
+      return null
+    }
+  }
+}
+
 export default ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
