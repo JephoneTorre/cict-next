@@ -1,19 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-
-// Dynamically import SyntaxHighlighter with no SSR
-const SyntaxHighlighter = dynamic(
-    () => import("react-syntax-highlighter").then((mod) => mod.Prism),
-    { ssr: false },
-);
-
-// Import the style normally (it's just an object)
-import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function MarkdownRenderer({ content }: { content: string }) {
     if (!content) return null;
@@ -34,40 +24,6 @@ export default function MarkdownRenderer({ content }: { content: string }) {
                 strong: ({ children }) => (
                     <strong className="font-bold">{children}</strong>
                 ),
-                em: ({ children }) => <em className="italic">{children}</em>,
-                blockquote: ({ children }) => (
-                    <blockquote className="border-l-4 border-blue-500 pl-4 py-2 my-4 italic text-gray-600 dark:text-gray-100 dark:bg-gray-900 bg-gray-50 rounded-r">
-                        {children}
-                    </blockquote>
-                ),
-                code: ({ className, children, ...props }) => {
-                    const match = /language-(\w+)/.exec(className || "");
-                    const codeString = String(children).replace(/\n$/, "");
-
-                    if (match) {
-                        return (
-                            <SyntaxHighlighter
-                                style={oneDark}
-                                language={match[1]}
-                                PreTag="div"
-                                className="rounded-lg my-4"
-                            >
-                                {codeString}
-                            </SyntaxHighlighter>
-                        );
-                    }
-
-                    return (
-                        <code
-                            className="bg-gray-100 text-red-600 px-1.5 py-0.5 rounded text-sm font-mono dark:bg-gray-800 dark:text-red-400"
-                            {...props}
-                        >
-                            {children}
-                        </code>
-                    );
-                },
-                pre: ({ children }) => <>{children}</>,
-                // ...existing code...
                 img: ({ src, alt }) => {
                     if (!src || typeof src !== "string") return null;
                     return (
