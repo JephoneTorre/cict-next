@@ -1,8 +1,4 @@
 import Image from "next/image";
-import MarkdownRenderer from './markdown-renderer';
-
-
-const STRAPI_URL = "http://localhost:1337";
 
 function renderBlocks(blocks: any[]) {
     return blocks.map((block, i) => {
@@ -42,6 +38,12 @@ export default async function PreviewPage({
     if (typeof id !== "string") {
         return <div>Invalid article ID</div>;
     }
+
+    if (!process.env.STRAPI_URL) {
+        return <div>STRAPI_URL is not defined in environment variables</div>;
+    }
+    
+    const STRAPI_URL = process.env.STRAPI_URL;
 
     const response = await fetch(
         `${STRAPI_URL}/api/posts/${id}?populate=*`,
