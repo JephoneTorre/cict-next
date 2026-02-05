@@ -21,7 +21,8 @@ export async function GET(request: Request) {
     (await draftMode()).enable();
   }
 
-  // Redirect to the path from the fetched post
-  // We don't redirect to searchParams.slug as that might lead to open redirect vulnerabilities
-  redirect(url || "/");
+  // Redirect to a validated internal path to avoid open redirect vulnerabilities
+  const safeUrl =
+    url && url.startsWith("/") && !url.startsWith("//") ? url : "/";
+  redirect(safeUrl);
 }
