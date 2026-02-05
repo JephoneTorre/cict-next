@@ -84,7 +84,6 @@ export default function MarkdownRenderer({ content }: { content: string }) {
                         </span>
                     );
                 },
-                // ...existing code...
             }}
         >
             {content}
