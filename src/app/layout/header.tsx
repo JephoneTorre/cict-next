@@ -12,13 +12,18 @@ export default function Header({ inter }) {
   const pathname = usePathname();
 
   return (
-    <header className={`${inter.className} grid grid-cols-3 items-center px-6 py-6 text-lg font-medium`}>
+    <header 
+      className={`${inter.className} grid grid-cols-3 items-center px-6 py-4 text-lg font-medium bg-orange-dark md:bg-transparent`}
+    >
       <Link 
         href="/" 
         className="flex justify-center items-center gap-x-2 col-span-3 md:col-span-1 mx-auto"
       >
-        <Image src="/cict-emblem-dark.png" width={37} height={38} alt="CICT LOGO" />
-        <Image src="/cict-wordmark.png" width={112} height={25} alt="WVSU CICT WORDMARK" />
+        <Image src="/cict-emblem-dark.png" width={37} height={38} alt="CICT LOGO" className="hidden md:block" />
+        <Image src="/cict-wordmark-dark.png" width={112} height={25} alt="WVSU CICT WORDMARK" className="hidden md:block" />
+        
+        <Image src="/cict-emblem-light.png" width={30} height={30} alt="CICT LOGO" className="md:hidden" />
+        <Image src="/cict-wordmark-light.png" width={98} height={32} alt="WVSU CICT WORDMARK" className="md:hidden" />
       </Link>
     
       <div className="hidden md:flex justify-center gap-x-12 mt-1">
