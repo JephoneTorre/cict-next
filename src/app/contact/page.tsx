@@ -36,7 +36,7 @@ export default function Contact() {
 
       {/* Subtext */}
       <p
-        className="text-[24px] text-center mt-4"
+        className="text-[24px] text-center mt-[-10px]"
         style={{
           fontFamily: 'var(--font-minor)',
           fontWeight: 300,
@@ -136,6 +136,75 @@ export default function Contact() {
 
         </div>
       </div>
+
+       {/* White Section Below FAQ */}
+<div className="w-full bg-white py-[120px]">
+  <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    
+    {/* LEFT — Get in Touch */}
+    <div>
+      <h2 className="text-[64px] font-[var(--font-major)] leading-tight text-left">
+        <span className="text-[#1E1E1E]">Get in </span>
+        <span className="text-[#FF6F42]">Touch</span>
+      </h2>
+
+      <p className="mt-4 text-[16px] w-full max-w-[516px] text-[#555] text-left font-[var(--font-minor)]">
+        We'd love to hear from you! Whether you have questions, need support, or want to learn more about our services, our team is here to help.
+      </p>
+    </div>
+
+    {/* RIGHT — Address + Contact Info */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+      
+      {/* Address */}
+      <div className="flex flex-col text-left">
+        <Image
+          src="/images/map_pin.png"
+          alt="Map Pin"
+          width={36}
+          height={36}
+          className="mb-4"
+        />
+
+        <h3 className="text-[22px] font-[var(--font-major)] font-bold text-[#FF6F42] mb-2">
+          Our address
+        </h3>
+
+        <p className="text-[16px] text-[#555] font-[var(--font-minor)] leading-[26px]">
+          West Visayas State University, La Paz, Iloilo City, Philippines
+        </p>
+      </div>
+
+      {/* Contact Info */}
+      <div className="flex flex-col text-left">
+        <Image
+          src="/images/contact_card.png"
+          alt="Contact Icon"
+          width={36}
+          height={36}
+          className="mb-4"
+        />
+
+        <h3 className="text-[22px] font-[var(--font-major)] font-bold text-[#FF6F42] mb-2">
+          Our Contact Info
+        </h3>
+
+        <p className="text-[16px] text-[#555] font-[var(--font-minor)] leading-[26px]">
+          <span className="text-[#FF9A7A] font-medium">Phone number:</span> (033) 320-0870 local 1234
+        </p>
+
+        <p className="text-[16px] text-[#555] font-[var(--font-minor)] leading-[26px] mt-2">
+          <span className="text-[#FF9A7A] font-medium">Email:</span> cict@wvsu.edu.ph
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
     </main>
   );
 }
