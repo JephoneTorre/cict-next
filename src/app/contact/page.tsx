@@ -90,12 +90,15 @@ export default function Contact() {
       <div className="mt-[120px] w-full bg-[#1E1E1E] flex justify-center items-start relative px-4 sm:px-6 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-8 w-full max-w-[1200px]">
           
-          {/* Left */}
-          <div className="flex flex-col flex-1">
-            <h2 className="pt-[198px] lg:pt-[198px] text-left text-[48px] sm:text-[64px] font-[var(--font-major)] font-bold leading-tight">
-              <span className="text-white">FREQUENTLY ASKED </span>
-              <span className="text-[#FF6F42]">QUESTIONS</span>
-            </h2>
+         {/* Left */}
+        <div className="flex flex-col flex-1 max-w-[700px]">
+        <h2 className="pt-[198px] lg:pt-[198px] text-left text-[48px] sm:text-[64px] font-[var(--font-major)] font-bold leading-tight w-full max-w-[1000px] break-words">
+        <span className="text-white block whitespace-nowrap">FREQUENTLY ASKED</span>
+        <span className="text-[#FF6F42] block whitespace-nowrap">QUESTIONS</span>
+      </h2>
+
+
+
 
             <div className="mt-10 flex flex-col gap-0">
               {items.map((item, index) => {
@@ -127,7 +130,7 @@ export default function Contact() {
           </div>
 
           {/* Right */}
-          <div className="flex justify-center lg:justify-start mt-10 lg:mt-[353px] lg:ml-[197px] lg:mb-[353px] flex-1">
+          <div className="flex justify-center lg:justify-start mt-10 lg:mt-[300px] lg:ml-[197px] lg:mb-[353px] flex-1">
             <Image src="/images/cictlogo.png" alt="CICT Logo" width={331} height={330} className="object-contain" />
           </div>
 
