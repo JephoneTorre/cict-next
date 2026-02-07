@@ -9,6 +9,9 @@ const active =
   "relative text-white md:text-[var(--color-orange-light)] after:absolute after:left-[-7px] after:right-[-7px] after:-bottom-1 after:h-[3px] md:after:bg-[var(--color-orange-light)] after:rounded-full";
 const inactive = "";
 
+const active_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300 text-[var(--color-orange-light)]";
+const inactive_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300";
+
 export default function Header({ inter }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -57,35 +60,40 @@ export default function Header({ inter }) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className={`${inter.className} absolute top-full left-0 w-full flex flex-col items-center gap-y-4 py-4 md:hidden z-50`}>
+        
+        <div className={`${inter.className} absolute top-full left-0 w-full bg-white md:hidden z-50 flex flex-col justify-center border-t border-gray-300`}>
+          
           <Link
             href="/programs"
-            className={pathname === "/programs" ? active : inactive}
+            className={pathname === "/programs" ? active_mobile : inactive_mobile}
             onClick={() => setIsOpen(false)}
           >
             PROGRAMS
           </Link>
           <Link
             href="/news-announcements"
-            className={pathname === "/news-announcements" ? active : inactive}
+            className={pathname === "/news-announcements" ? active_mobile : inactive_mobile}
             onClick={() => setIsOpen(false)}
           >
             NEWS
           </Link>
           <Link
             href="/faculty-profiles"
-            className={pathname === "/faculty-profiles" ? active : inactive}
+            className={pathname === "/faculty-profiles" ? active_mobile : inactive_mobile}
             onClick={() => setIsOpen(false)}
           >
             FACULTY
           </Link>
           <Link
             href="/contact"
-            className={pathname === "/contact" ? active : inactive}
+            className={pathname === "/contact" ? active_mobile : inactive_mobile}
             onClick={() => setIsOpen(false)}
           >
             CONTACT
           </Link>
+          <p className="text-[10px] text-gray-500 my-3 text-center">
+            Copyright 2026 © WVSU CICT. All Rights Reserved
+          </p>
         </div>
       )}
 
