@@ -15,26 +15,23 @@ export default function Header({ inter }) {
 
   return (
     <header 
-      className={`${inter.className} relative flex md:grid md:grid-cols-3 items-center px-6 py-4 text-lg font-medium bg-orange-dark md:bg-transparent`}
+      className={`${inter.className} relative flex justify-between md:grid md:grid-cols-3 items-center px-6 py-4 text-lg font-medium`}
     >      
+      <Link 
+        href="/" 
+        className="flex justify-center items-center gap-x-2 md:col-span-1"
+      >
+        <Image src="/cict-emblem-dark.png" width={37} height={38} alt="CICT LOGO" className="" />
+        <Image src="/cict-wordmark-dark.png" width={112} height={25} alt="WVSU CICT WORDMARK" className="" />
+      </Link>
+      
       {/* Hamburger icon */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden absolute flex left-6 justify-center items-center w-6 h-8 space-y-1"
+        className="md:hidden"
       >
-        <Image src="/hamburger-icon.png" width={20} height={15} alt="HAMBURGER" />
+        <Image src="/hamburger.png" width={20} height={20} alt="HAMBURGER" />
       </button>
-
-      <Link 
-        href="/" 
-        className="flex justify-center items-center gap-x-2 col-span-3 md:col-span-1 mx-auto"
-      >
-        <Image src="/cict-emblem-dark.png" width={37} height={38} alt="CICT LOGO" className="hidden md:block" />
-        <Image src="/cict-wordmark-dark.png" width={112} height={25} alt="WVSU CICT WORDMARK" className="hidden md:block" />
-        
-        <Image src="/cict-emblem-light.png" width={30} height={30} alt="CICT LOGO" className="md:hidden" />
-        <Image src="/cict-wordmark-light.png" width={98} height={32} alt="WVSU CICT WORDMARK" className="md:hidden" />
-      </Link>
     
       <div className="hidden md:flex justify-center gap-x-12 mt-1">
         <Link href="/programs" className={(pathname === "/programs") ? active : inactive}>
@@ -60,7 +57,7 @@ export default function Header({ inter }) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className={`${inter.className} absolute top-full left-0 w-full bg-orange-dark flex flex-col items-center gap-y-4 py-4 md:hidden z-50"`}>
+        <div className={`${inter.className} absolute top-full left-0 w-full flex flex-col items-center gap-y-4 py-4 md:hidden z-50`}>
           <Link
             href="/programs"
             className={pathname === "/programs" ? active : inactive}
