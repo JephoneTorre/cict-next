@@ -18,7 +18,7 @@ export default function Header({ inter }) {
 
   return (
     <header 
-      className={`${inter.className} relative flex justify-between md:grid md:grid-cols-3 items-center px-6 py-4 text-lg font-medium`}
+      className={`${inter.className} relative h-18 flex justify-between md:grid md:grid-cols-3 items-center px-6 text-lg font-medium`}
     >      
       <Link 
         href="/" 
