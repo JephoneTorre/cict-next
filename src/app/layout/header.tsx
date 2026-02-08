@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const active =
-  "relative text-white md:text-[var(--color-orange-light)] after:absolute after:left-[-7px] after:right-[-7px] after:-bottom-1 after:h-[3px] md:after:bg-[var(--color-orange-light)] after:rounded-full";
-const inactive = "";
+  "relative text-[var(--color-orange-light)] after:absolute after:left-[-7px] after:right-[-7px] after:-bottom-1 after:h-[3px] md:after:bg-[var(--color-orange-light)] after:rounded-full duration-200";
+const inactive = "hover:text-[var(--color-orange-light)] duration-200 hover:scale-105"
 
-const active_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300 text-[var(--color-orange-light)]";
-const inactive_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300";
+const active_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300 text-[var(--color-orange-light)] duration-200 hover:scale-105";
+const inactive_mobile = "w-[90%] mx-auto text-center py-4 border-b border-gray-300 duration-200 hover:scale-105";
 
 export default function Header({ inter }) {
   const pathname = usePathname();
@@ -22,7 +22,7 @@ export default function Header({ inter }) {
     >      
       <Link 
         href="/" 
-        className="flex justify-center items-center gap-x-2 md:col-span-1"
+        className="flex justify-center items-center gap-x-2 md:col-span-1 duration-200 hover:scale-105"
       >
         <Image src="/cict-emblem-dark.png" width={37} height={38} alt="CICT LOGO" className="" />
         <Image src="/cict-wordmark-dark.png" width={112} height={25} alt="WVSU CICT WORDMARK" className="" />
