@@ -29,7 +29,7 @@ export default function Contact() {
     <main className="flex flex-col items-center mt-[176px] text-center w-full">
       
       {/* Hero */}
-      <h1 className="text-[86px] font-[var(--font-major)]">
+      <h1 className="text-[86px] font-[var(--font-major)] tracking-[-2px]">
         <span className="text-[#1E1E1E]">COLLEGE CONTACT </span>
         <span className="text-[#FF6F42]">INFORMATION</span>
       </h1>
@@ -154,12 +154,12 @@ export default function Contact() {
     </div>
 
     {/* RIGHT — Address + Contact Info */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-10 lg:mt-0">
       
       {/* Address */}
       <div className="flex flex-col text-left">
         <Image
-          src="/images/map_pin.png"
+          src="/images/home.png"
           alt="Map Pin"
           width={36}
           height={36}
@@ -178,7 +178,7 @@ export default function Contact() {
       {/* Contact Info */}
       <div className="flex flex-col text-left">
         <Image
-          src="/images/contact_card.png"
+          src="/images/mobile.png"
           alt="Contact Icon"
           width={36}
           height={36}
