@@ -76,7 +76,7 @@ export default function NewsAnnouncements() {
     };
 
     return (
-        <main className="px-8 py-8 space-y-10">
+        <main className="px-12 py-8 space-y-10">
             {/* [SECTION] Announcements */}
             <section className="space-y-6">
                 <div className="flex items-center gap-2">
