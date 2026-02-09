@@ -87,9 +87,8 @@ export default function NewsAnnouncements() {
                 </div>
 
                 {/* [SECTION] Announcements Carousel */}
-                <div className="relative w-full rounded-lg overflow-hidden">
-                    <div className="absolute inset-0 bg-carousel bg-cover bg-center"></div>
-                    <div className="absolute inset-0 bg-[var(--color-orange-light)] opacity-60"/>
+                <div className="relative w-full rounded-lg overflow-hidden bg-[url('/carousel-bg.webp')] bg-cover bg-center">
+                    <div className="absolute inset-0 bg-[var(--color-orange-light)] opacity-60"></div>
                     <div className="relative z-10 py-10 px-6">
                         <AnnouncementsCarousel articles={newsArticles} />
                     </div>

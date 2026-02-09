@@ -64,9 +64,3 @@
     font-weight: 700;
   }
 }
-
-.bg-carousel {
-  background-image: url('/carousel-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
