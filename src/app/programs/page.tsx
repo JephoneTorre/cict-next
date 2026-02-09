@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MoveRight } from 'lucide-react';
 import programsData from '../data/programs.json';
 
 interface Program {
@@ -21,7 +20,7 @@ export default function ProgramsPage() {
       <section className="relative flex md:flex-row w-full md:w-full h-103 md:h-148">
         <div className="absolute md:relative w-full h-100 md:h-full md:w-1/2">
           <Image
-            src="/program_assets/cict.png"
+            src="/program_assets/cict.webp"
             alt="WVSU CICT Building"
             fill
             className="object-cover opacity-70 md:opacity-100"
@@ -69,7 +68,12 @@ export default function ProgramsPage() {
                 {program.name}
               </p>
               <div className="text-black group-hover:text-orange-500 transition-colors transform group-hover:translate-x-1">
-                <MoveRight size={20} />
+                <Image
+                  src="/program_assets/arrow.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
               </div>
             </Link>
           ))}

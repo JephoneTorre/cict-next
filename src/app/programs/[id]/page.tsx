@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, FileText, GraduationCap } from 'lucide-react';
 import programsData from '../../data/programs.json';
 import Image from 'next/image';
 
@@ -70,7 +69,9 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                         href="/programs"
                         className="group flex items-center justify-center gap-2 bg-white text-orange-light px-4 py-1.5 md:px-6 md:py-2 rounded-3xl text-sm md:text-2xl hover:bg-gray-100 transition-all active:scale-95 shadow-sm"
                     >
-                        <ChevronLeft className="w-5 h-5 md:w-8 md:h-8 group-hover:-translate-x-1 transition-transform" />
+                        <span className="group-hover:-translate-x-1 transition-transform">
+                            &lt;
+                        </span>
                         <span className="font-medium md:font-normal">Back to Programs</span>
                     </Link>
                 </div>
@@ -117,7 +118,12 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                     >
                         {/* Icon Circle */}
                         <div className="shrink-0 w-20 h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
-                            <FileText size={50} strokeWidth={1.5} />
+                            <Image
+                                src="/program_assets/pdf-icon.svg"
+                                alt=""
+                                width={40}
+                                height={40}
+                            />
                         </div>
                         {/* Text */}
                         <div className="flex flex-col">
@@ -135,7 +141,12 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                     <div className="flex items-center gap-12 w-full md:w-auto">
                         {/* Icon Circle */}
                         <div className="shrink-0 w-20 h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
-                            <GraduationCap size={55} strokeWidth={1.5} />
+                            <Image
+                                src="/program_assets/cap-icon.svg"
+                                alt=""
+                                width={50}
+                                height={50}
+                            />
                         </div>
                         {/* Text */}
                         <div className="flex flex-col">
