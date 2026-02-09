@@ -32,7 +32,7 @@ export default function ProgramsPage() {
         </div>
         <div className="relative z-10 flex flex-col justify-center w-full h-full px-6 text-center text-white md:w-1/2 md:bg-orange-light md:text-left md:p-20 ">
           <h1 className="text-5xl font-medium mb-6 drop-shadow-xl md:drop-shadow-none">Programs and Curriculum</h1>
-          <p className="max-w-md text-base font-light leading-relaxed tracking-tight drop-shadow-xl md:drop-shadow-none">
+          <p className="mx-auto md:mx-0 max-w-md text-base font-light leading-relaxed tracking-tight drop-shadow-xl md:drop-shadow-none">
             Explore our undergraduate and graduate degree programs and take the next step toward your goals.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ProgramsPage() {
           Courses Offered
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-17 md:gap-y-22 pb-80 md:pb-42">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-17 md:gap-y-22 pb-80 md:pb-42">
           {PROGRAMS.map((program: Program) => (
             <Link
               key={program.id}

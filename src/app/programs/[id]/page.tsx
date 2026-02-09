@@ -91,7 +91,7 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                     <h2 className="text-orange-light text-4xl md:text-[40px] font-medium md:font-normal mb-8">
                         Program Description
                     </h2>
-                    <div className="text-black text-base text-justify font-minor font-normal leading-relaxed tracking-tight whitespace-pre-line">
+                    <div className="text-black text-base text-justify font-minor leading-relaxed tracking-tight whitespace-pre-line">
                         {program.description}
                     </div>
                 </div>
@@ -101,13 +101,13 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                     <h2 className="text-orange-light text-4xl md:text-[40px] font-medium md:font-normal mb-8">
                         Program Objectives
                     </h2>
-                    <p className="text-black text-base text-justify leading-relaxed font-normal tracking-tight whitespace-pre-line">
+                    <p className="text-black text-base text-justify leading-relaxed tracking-tight whitespace-pre-line">
                         {program.objectives}
                     </p>
                 </div>
 
                 {/* INFO CARD */}
-                <div className="w-89 md:w-5xl mx-auto bg-white border-[1.5] border-black rounded-2xl p-8 mb-45 md:mt-0 md:mb-0 md:px-35 md:py-4 flex flex-col md:flex-row justify-between gap-10 shadow-sm">
+                <div className="w-auto md:w-5xl mx-auto bg-white border-[1.5] border-black rounded-2xl p-8 mb-45 md:mt-0 md:mb-0 md:px-35 md:py-4 flex flex-col sm:flex-row md:flex-row justify-between gap-10 shadow-sm">
 
                     {/* Left: Download Curriculum */}
                     <a
@@ -130,7 +130,7 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                             <span className="font-bold text-base text-black leading-tight tracking-tight">
                                 [PDF] Curriculum Details
                             </span>
-                            <span className="text-black font-normal font-minor text-base tracking-tight">
+                            <span className="text-black text-base tracking-tight">
                                 Press button to download
                             </span>
                         </div>
@@ -153,10 +153,10 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                             <span className="font-bold text-base text-black leading-tight tracking-tight">
                                 Program Duration
                             </span>
-                            <span className="text-black font-normal font-minor text-base tracking-tight">
+                            <span className="text-black text-base tracking-tight">
                                 {program.duration}
                             </span>
-                            <span className="text-black font-normal font-minor text-base tracking-tight">
+                            <span className="text-black text-base tracking-tight">
                                 {program.semesters}
                             </span>
                         </div>
