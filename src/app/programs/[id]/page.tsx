@@ -77,7 +77,7 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                 </div>
 
                 {/* Program Title */}
-                <h1 className="relative z-10 max-w-2xl md:max-w-6xl text-left md:text-center text-white text-[45px] md:text-7xl font-semibold md:font-normal leading-12 md:leading-tight mt-10 md:mt-0 drop-shadow-sm">
+                <h1 className="relative z-10 max-w-2xl md:max-w-6xl text-left md:text-center text-white text-[40px] md:text-7xl font-semibold md:font-normal leading-12 md:leading-tight mt-10 md:mt-0 drop-shadow-sm">
                     {program.name}
                 </h1>
             </section>
@@ -88,20 +88,20 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
 
                 {/* 1. Description */}
                 <div className="mb-12 md:mb-16">
-                    <h2 className="text-orange-light text-4xl md:text-[40px] font-medium md:font-normal mb-8">
+                    <h2 className="text-orange-light text-3xl md:text-[40px] font-medium md:font-normal mb-8">
                         Program Description
                     </h2>
-                    <div className="text-black text-base text-justify font-minor leading-relaxed tracking-tight whitespace-pre-line">
+                    <div className="text-black text-sm md:text-base text-justify font-minor leading-relaxed tracking-tight whitespace-pre-line">
                         {program.description}
                     </div>
                 </div>
 
                 {/* 2. Objectives */}
                 <div className="mb-20">
-                    <h2 className="text-orange-light text-4xl md:text-[40px] font-medium md:font-normal mb-8">
+                    <h2 className="text-orange-light text-3xl md:text-[40px] font-medium md:font-normal mb-8">
                         Program Objectives
                     </h2>
-                    <p className="text-black text-base text-justify leading-relaxed tracking-tight whitespace-pre-line">
+                    <p className="text-black text-sm md:text-base text-justify leading-relaxed tracking-tight whitespace-pre-line">
                         {program.objectives}
                     </p>
                 </div>
@@ -117,20 +117,20 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                         className="flex items-center gap-12 group cursor-pointer w-full md:w-auto hover:opacity-80 transition-opacity"
                     >
                         {/* Icon Circle */}
-                        <div className="shrink-0 w-20 h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
+                        <div className="shrink-0 w-15 h-15 md:w-20 md:h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
                             <Image
                                 src="/program_assets/pdf-icon.svg"
                                 alt=""
-                                width={40}
-                                height={40}
+                                width={30}
+                                height={30}
                             />
                         </div>
                         {/* Text */}
                         <div className="flex flex-col">
-                            <span className="font-bold text-base text-black leading-tight tracking-tight">
+                            <span className="font-bold text-sm md:text-base text-black leading-tight tracking-tight">
                                 [PDF] Curriculum Details
                             </span>
-                            <span className="text-black text-base tracking-tight">
+                            <span className="text-black text-sm md:text-base tracking-tight">
                                 Press button to download
                             </span>
                         </div>
@@ -140,23 +140,23 @@ export default async function ProgramDetailsPage({ params }: PageProps) {
                     {/* Right: Program Duration */}
                     <div className="flex items-center gap-12 w-full md:w-auto">
                         {/* Icon Circle */}
-                        <div className="shrink-0 w-20 h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
+                        <div className="shrink-0 w-15 h-15 md:w-20 md:h-20 rounded-full bg-orange-light text-white flex items-center justify-center shadow-md">
                             <Image
                                 src="/program_assets/cap-icon.svg"
                                 alt=""
-                                width={50}
-                                height={50}
+                                width={40}
+                                height={40}
                             />
                         </div>
                         {/* Text */}
                         <div className="flex flex-col">
-                            <span className="font-bold text-base text-black leading-tight tracking-tight">
+                            <span className="font-bold text-sm md:text-base text-black leading-tight tracking-tight">
                                 Program Duration
                             </span>
-                            <span className="text-black text-base tracking-tight">
+                            <span className="text-black text-sm md:text-base tracking-tight">
                                 {program.duration}
                             </span>
-                            <span className="text-black text-base tracking-tight">
+                            <span className="text-black text-sm md:text-base tracking-tight">
                                 {program.semesters}
                             </span>
                         </div>
