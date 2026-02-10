@@ -63,8 +63,8 @@ export default function ProgramsPage() {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-medium tracking-tighter pt-10 mb-2">{program.code}</h3>
-              <p className="px-10 text-base font-normal mb-14 leading-tight tracking-tight h-10">
+              <h3 className="text-2xl md:text-3xl font-medium tracking-tighter pt-10 mb-3 md:mb-2">{program.code}</h3>
+              <p className="px-10 text-sm md:text-base font-normal mb-14 leading-tight tracking-tight h-10">
                 {program.name}
               </p>
               <div className="text-black group-hover:text-orange-500 transition-colors transform group-hover:translate-x-1">
