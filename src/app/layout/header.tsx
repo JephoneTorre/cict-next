@@ -5,10 +5,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const active = "text-(--font-minor) relative text-[var(--color-orange-light)] after:absolute after:left-[-7px] after:right-[-7px] after:-bottom-1 after:h-[3px] md:after:bg-[var(--color-orange-light)] after:rounded-full duration-200";
+const active = "text-(--font-minor) relative text-[var(--color-orange-light)] after:absolute after:inset-x-0 after:-bottom-1 after:h-1 md:after:bg-[var(--color-orange-light)] after:rounded-full duration-200";
 const inactive = "text-(--font-minor) hover:text-[var(--color-orange-light)] duration-200 hover:scale-105"
-const active_mobile = "text-(--font-minor) w-[90%] mx-auto text-center py-4 border-b border-gray-300 bg-orange-50 text-[var(--color-orange-light)] duration-200 active:scale-90";
-const inactive_mobile = "text-(--font-minor) w-[90%] mx-auto text-center py-4 border-b border-gray-300 duration-200 active:scale-90";
+const active_mobile = "text-(--font-minor) w-5/6 mx-auto text-center py-4 border-b border-gray-300 bg-orange-50 text-[var(--color-orange-light)] duration-200 active:scale-90";
+const inactive_mobile = "text-(--font-minor) w-5/6 mx-auto text-center py-4 border-b border-gray-300 duration-200 active:scale-90";
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header 
-      className="relative h-18 flex justify-between md:grid md:grid-cols-3 items-center px-6 text-lg font-medium`"
+      className="relative h-16 flex justify-between md:grid md:grid-cols-3 items-center px-6 text-lg font-medium"
     >      
       <Link 
         href="/" 
@@ -89,7 +89,7 @@ export default function Header() {
           >
             CONTACT
           </Link>
-          <p className="text-[10px] text-gray-500 my-3 text-center">
+          <p className="text-(--font-size-xs) text-gray-500 my-3 text-center">
             Copyright 2026 © WVSU CICT. All Rights Reserved
           </p>
         </div>
