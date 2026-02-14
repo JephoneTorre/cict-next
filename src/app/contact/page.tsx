@@ -23,7 +23,7 @@ const items = [
 ];
 
 export default function Contact() {
-  const [active, setActive] = useState<number | null>(null);
+  const [active, setActive] = useState(null);
 
   return (
     <main className="flex flex-col items-center mt-44 text-center w-full">
@@ -85,7 +85,6 @@ export default function Contact() {
       {/* FAQ */}
       <section className="w-full bg-neutral-900 mt-32 py-32 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20">
-
           <div>
             <h2 className="text-5xl font-major text-left leading-tight">
               <span className="text-white block">FREQUENTLY ASKED</span>
@@ -105,7 +104,7 @@ export default function Contact() {
                       <Image
                         src={
                           isOpen
-                            ? "/icons/minus.png"
+                            ? "/icons/minus_icon.png"
                             : "/icons/chevron_down.png"
                         }
                         alt="toggle"
@@ -137,14 +136,16 @@ export default function Contact() {
               height={330}
             />
           </div>
-
         </div>
       </section>
+
+      
 
       {/* GET IN TOUCH */}
       <section className="w-full bg-white py-32 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20">
 
+          {/* LEFT */}
           <div>
             <h2 className="text-5xl font-major text-left">
               <span className="text-neutral-900">Get in </span>
@@ -155,27 +156,28 @@ export default function Contact() {
               Whether you have questions, need support, or want to learn more —
               our team is here to help.
             </p>
+
+            <div className="flex gap-3 mt-6 justify-start">
+              <Image src="/icons/facebook.png" alt="fb" width={40} height={40} />
+              <Image src="/icons/instagram.png" alt="ig" width={40} height={40} />
+              <Image src="/icons/linkedin.png" alt="in" width={40} height={40} />
+            </div>
           </div>
 
+          {/* RIGHT */}
           <div className="grid sm:grid-cols-2 gap-14">
-
-            {/* ADDRESS */}
             <div className="text-left">
               <Image src="/icons/home.png" alt="address" width={36} height={36} />
-
               <h3 className="text-lg font-major font-bold text-orange-light mt-4">
                 Our Address
               </h3>
-
               <p className="text-neutral-600 font-minor mt-2">
                 WVSU, La Paz, Iloilo City, Philippines
               </p>
             </div>
 
-            {/* CONTACT INFO */}
             <div className="text-left">
               <Image src="/icons/mobile.png" alt="contact" width={36} height={36} />
-
               <h3 className="text-lg font-major font-bold text-orange-light mt-4">
                 Contact Info
               </h3>
@@ -187,31 +189,37 @@ export default function Contact() {
               <p className="text-neutral-600 font-minor mt-1">
                 <span className="text-orange-dark">Email:</span> cict@wvsu.edu.ph
               </p>
-
-              <div className="flex gap-3 mt-6 justify-start">
-                <Image src="/icons/facebook.png" alt="fb" width={40} height={40} />
-                <Image src="/icons/instagram.png" alt="ig" width={40} height={40} />
-                <Image src="/icons/linkedin.png" alt="in" width={40} height={40} />
-              </div>
             </div>
-
+            
           </div>
-        </div>
+          
 
-        {/* MAP — CENTERED, LARGE */}
-        <div className="w-full flex justify-center mt-[150px]">
-          <div className="w-[1148px] h-[538.69px] rounded-2xl overflow-hidden shadow-xl">
-            <iframe
-              src="https://www.google.com/maps?q=West+Visayas+State+University+La+Paz+Iloilo+City+Philippines&output=embed"
-              width="100%"
-              height="100%"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border-0"
-              allowFullScreen
-            />
-          </div>
         </div>
+        {/* MAP */}
+      <section className="w-full flex justify-center mt-[150px]">
+        <div className="w-[1148px] h-[538.69px] rounded-xl overflow-hidden shadow-xl">
+          <iframe
+            src="https://www.google.com/maps?q=West%20Visayas%20State%20University%20La%20Paz%20Iloilo&output=embed"
+            className="w-full h-full border-0"
+            loading="lazy"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
+            {/* CONNECT WITH US */}
+          <section className="w-full flex justify-center mt-[217px]">
+            <h2 className="text-[64px] text-orange-light font-major text-center">
+              Connect with Us!
+            </h2>
+          </section>
+            {/* BELOW CONNECT WITH US */}
+            <p className="text-lg font-minor text-[#363636] text-center mt-6">
+              We love to hear from you! If you have any questions, comments, or feedback, you can email or call us.
+            </p>
+
+
+
 
       </section>
 
