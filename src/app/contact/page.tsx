@@ -145,7 +145,6 @@ export default function Contact() {
       <section className="w-full bg-white py-32 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20">
 
-          {/* LEFT */}
           <div>
             <h2 className="text-5xl font-major text-left">
               <span className="text-neutral-900">Get in </span>
@@ -156,30 +155,27 @@ export default function Contact() {
               Whether you have questions, need support, or want to learn more —
               our team is here to help.
             </p>
-
-            {/* Social Icons */}
-            <div className="flex gap-10 mt-6 justify-start">
-              <Image src="/icons/facebook.png" alt="fb" width={40} height={40} />
-              <Image src="/icons/instagram.png" alt="ig" width={40} height={40} />
-              <Image src="/icons/linkedin.png" alt="in" width={40} height={40} />
-            </div>
           </div>
 
-          {/* RIGHT */}
           <div className="grid sm:grid-cols-2 gap-14">
 
+            {/* ADDRESS */}
             <div className="text-left">
               <Image src="/icons/home.png" alt="address" width={36} height={36} />
+
               <h3 className="text-lg font-major font-bold text-orange-light mt-4">
                 Our Address
               </h3>
+
               <p className="text-neutral-600 font-minor mt-2">
                 WVSU, La Paz, Iloilo City, Philippines
               </p>
             </div>
 
+            {/* CONTACT INFO */}
             <div className="text-left">
               <Image src="/icons/mobile.png" alt="contact" width={36} height={36} />
+
               <h3 className="text-lg font-major font-bold text-orange-light mt-4">
                 Contact Info
               </h3>
@@ -191,10 +187,32 @@ export default function Contact() {
               <p className="text-neutral-600 font-minor mt-1">
                 <span className="text-orange-dark">Email:</span> cict@wvsu.edu.ph
               </p>
+
+              <div className="flex gap-3 mt-6 justify-start">
+                <Image src="/icons/facebook.png" alt="fb" width={40} height={40} />
+                <Image src="/icons/instagram.png" alt="ig" width={40} height={40} />
+                <Image src="/icons/linkedin.png" alt="in" width={40} height={40} />
+              </div>
             </div>
 
           </div>
         </div>
+
+        {/* MAP — CENTERED, LARGE */}
+        <div className="w-full flex justify-center mt-[150px]">
+          <div className="w-[1148px] h-[538.69px] rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.google.com/maps?q=West+Visayas+State+University+La+Paz+Iloilo+City+Philippines&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="border-0"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
       </section>
 
     </main>
