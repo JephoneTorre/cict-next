@@ -60,7 +60,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
         {/* Read More Button */}
         <Link
           href={`/news-announcements/news/${generateSlug(header)}`}
-          className="text-xs sm:text-sm font-minor font-semibold text-white tracking-wider mt-4 px-3 py-1 self-start bg-[var(--color-orange-dark)] border border-[var(--color-orange-dark)] rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:text-[var(--color-orange-dark)] hover:bg-white hover:border-[var(--color-orange-dark)]"
+          className="text-xs sm:text-sm font-minor font-semibold text-white tracking-wider mt-4 px-3 py-1 self-start bg-orange-dark border border-orange-dark rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:text-orange-dark hover:bg-white hover:border-orange-dark"
         >
           Read More &nbsp;→
         </Link>

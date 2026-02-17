@@ -134,7 +134,7 @@ export const AnnouncementsCarousel: React.FC<AnnouncementsCarouselProps> = ({ ar
 										}
 										className={`text-xs md:text-sm font-minor font-semibold tracking-wider mt-4 px-3 py-1 self-start rounded-full transition-colors duration-300 ease-in-out ${
 											isActive
-												? "text-white bg-[var(--color-orange-dark)] border border-[var(--color-orange-dark)] hover:text-[var(--color-orange-dark)] hover:bg-white hover:border-[var(--color-orange-dark)] cursor-pointer"
+												? "text-white bg-orange-dark border border-orange-dark hover:text-orange-dark hover:bg-white hover:border-orange-dark cursor-pointer"
 												: "text-gray-400 bg-gray-200 border border-gray-200 pointer-events-none"
 										}`}
 									>
@@ -155,7 +155,7 @@ export const AnnouncementsCarousel: React.FC<AnnouncementsCarouselProps> = ({ ar
 						onClick={() => goToIndex(index)}
 						className={`w-3 h-3 rounded-full transition-colors ${
 							index === activeIndex
-								? "bg-[var(--color-orange-dark)]"
+								? "bg-orange-dark"
 								: "bg-gray-300"
 						}`}
 					/>

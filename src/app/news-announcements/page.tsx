@@ -86,12 +86,12 @@ export default function NewsAnnouncements() {
                     <h2 className="text-2xl sm:text-3xl font-medium text-[#4D4D4D] whitespace-nowrap">
                         ANNOUNCEMENTS
                     </h2>
-                    <div className="flex-1 h-[2px] border-2 border-[var(--color-orange-dark)]"></div>
+                    <div className="flex-1 h-[2px] border-2 border-orange-dark"></div>
                 </div>
 
                 {/* [SECTION] Announcements Carousel */}
                 <div className="relative w-full rounded-lg overflow-hidden bg-[url('/carousel-bg.webp')] bg-cover bg-center">
-                    <div className="absolute inset-0 bg-[var(--color-orange-light)] opacity-60"></div>
+                    <div className="absolute inset-0 bg-orange-light opacity-60"></div>
                     <div className="relative z-10 py-10 px-6">
                         <AnnouncementsCarousel articles={newsArticles} />
                     </div>
@@ -104,7 +104,7 @@ export default function NewsAnnouncements() {
                     <h2 className="text-2xl sm:text-3xl font-medium text-[#4D4D4D] whitespace-nowrap">
                         NEWS ARTICLES
                     </h2>
-                    <div className="flex-1 h-[2px] border-2 border-[var(--color-orange-dark)]"/>
+                    <div className="flex-1 h-[2px] border-2 border-orange-dark"/>
                 </div>
 
                 {/* [FEATURE] Search Bar & Sort Filter */}
@@ -141,7 +141,7 @@ export default function NewsAnnouncements() {
                             key={page}
                             onClick={() => goToPage(page)}
                             className={`px-3 py-1 rounded border ${
-                                page === currentPage ? "bg-[var(--color-orange-dark)] text-white" : "bg-white hover:bg-gray-100"
+                                page === currentPage ? "bg-orange-dark text-white" : "bg-white hover:bg-gray-100"
                             }`}
                         >
                             {page}
