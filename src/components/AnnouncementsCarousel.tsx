@@ -66,6 +66,23 @@ export const AnnouncementsCarousel: React.FC<AnnouncementsCarouselProps> = ({ ar
 	return (
 		<>
 			<div className="relative w-full overflow-hidden">
+				{/* [BUTTON] Left Arrow */}
+				<button
+					onClick={goPrev}
+					className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow- rounded-full w-10 h-10 flex items-center justify-center transition-all duration-200 cursor-pointer"
+					aria-label="Previous"
+				>
+					<Image src="/arrow-left-icon.svg" alt="left-arrow" width={16} height={24} />
+				</button>
+
+				{/* [BUTTON] Right Arrow */}
+				<button
+					onClick={goNext}
+					className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center transition-all duration-200 cursor-pointer"
+					aria-label="Next"
+				>
+					<Image src="/arrow-right-icon.svg" alt="right-arrow" width={16} height={24} />
+				</button>
 				<div
 					className="flex transition-transform duration-500 ease-in-out space-x-10 py-4"
 					style={{ transform: `translateX(calc(50% - ${offset}px))` }}
@@ -85,29 +102,6 @@ export const AnnouncementsCarousel: React.FC<AnnouncementsCarouselProps> = ({ ar
 									isActive ? "scale-105 sm:scale-110 z-10" : "scale-100 opacity-40"
 								}`}
 							>
-								{/* [BUTTON] Left Arrow */}
-								<button
-									onClick={goPrev}
-									className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 
-									bg-white/90 hover:bg-white shadow-md rounded-full 
-									w-10 h-10 flex items-center justify-center 
-									transition-all duration-200 cursor-pointer"
-									aria-label="Previous"
-								>
-									<Image src="/arrow-left-icon.svg" alt="left-arrow" width={16} height={24} />
-								</button>
-
-								{/* [BUTTON] Right Arrow */}
-								<button
-									onClick={goNext}
-									className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 
-									bg-white/90 hover:bg-white shadow-md rounded-full 
-									w-10 h-10 flex items-center justify-center 
-									transition-all duration-200 cursor-pointer"
-									aria-label="Next"
-								>
-									<Image src="/arrow-right-icon.svg" alt="right-arrow" width={16} height={24} />
-								</button>
 								<div className="p-4 pb-5 sm:p-5 md:p-6 bg-white rounded-xl space-y-2 sm:space-y-4 md:space-y-5 overflow-hidden">
 									<p className="text-end text-xs font-minor text-[#4D4D4D] mb-4">
 										{daysAgo} days ago
