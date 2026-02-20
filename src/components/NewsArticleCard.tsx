@@ -43,11 +43,11 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
 
       {/* Content */}
       <div className="py-4 px-6 flex flex-col justify-between flex-1">
-        <div className="space-y-3">
-            <p className="text-xs sm:text-sm font-minor text-[#4D4D4D]/80">{date}</p>
+        <div className="space-y-1 md:space-y-3">
+            <p className="text-xs font-minor text-[#4D4D4D]/80">{date}</p>
             <h3 className="text-lg sm:text-xl font-major font-bold">{header}</h3>
             {description ? (
-            <p className="text-xs sm:text-sm font-minor text-[#000000]/60 line-clamp-3 leading-loose sm:leading-normal">
+            <p className="hidden md:block text-sm font-minor text-[#000000]/60 line-clamp-3 leading-loose sm:leading-normal">
                 {description}
             </p>
             ) : (
@@ -60,7 +60,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
         {/* Read More Button */}
         <Link
           href={`/news-announcements/news/${generateSlug(header)}`}
-          className="text-xs sm:text-sm font-minor font-semibold text-white tracking-wider mt-4 px-3 py-1 self-start bg-orange-dark border border-orange-dark rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:text-orange-dark hover:bg-white hover:border-orange-dark"
+          className="text-xs sm:text-sm font-minor font-semibold text-white tracking-wider mt-3 px-3 py-1 self-start bg-orange-dark border border-orange-dark rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:text-orange-dark hover:bg-white hover:border-orange-dark"
         >
           Read More &nbsp;→
         </Link>
