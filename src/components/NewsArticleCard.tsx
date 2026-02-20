@@ -44,7 +44,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
       {/* Content */}
       <div className="py-4 px-6 flex flex-col justify-between flex-1">
         <div className="space-y-3">
-            <p className="text-xs sm:text-sm font-minor text-[#4D4D4D]">{date}</p>
+            <p className="text-xs sm:text-sm font-minor text-[#4D4D4D]/80">{date}</p>
             <h3 className="text-lg sm:text-xl font-major font-bold">{header}</h3>
             {description ? (
             <p className="text-xs sm:text-sm font-minor text-[#000000]/60 line-clamp-3 leading-loose sm:leading-normal">

@@ -20,28 +20,28 @@ export default function NewsAnnouncements() {
     const newsArticles = useMemo(() => [
         {
             id: 1,
-            date: "02/01/2026",
+            date: "February 1, 2026",
             description: "WVSU-CICT showcased innovative tech solutions at the ICC 2025 in Taiwan, highlighting student projects and faculty research.",
             newsHeader: "WVSU-CICT Presents Tech Solutions at ICC 2025 in Taiwan",
         },
         {
             id: 2,
             imgSrc: "",
-            date: "02/02/2026",
+            date: "February 2, 2026",
             description: "CICT faculty member Dr. Reyes published a groundbreaking research paper on AI applications in education, receiving international acclaim.",
             newsHeader: "CICT Faculty Publishes AI Research Paper",
         },
         {
             id: 3,
             imgSrc: "",
-            date: "02/03/2026",
+            date: "February 3, 2026",
             description: "WVSU-CICT will host the annual Student Projects Showcase on March 15, featuring innovative projects from students across all levels.",
             newsHeader: "New Student Projects Showcase 2026",
         },
         {
             id: 4,
             imgSrc: "",
-            date: "02/04/2026",
+            date: "February 4, 2026",
             description: "WVSU-CICT is launching a new scholarship program for underprivileged students pursuing degrees in computer science and information technology.",
             newsHeader: "Upcoming Technology Workshops at WVSU",
         },
@@ -108,9 +108,11 @@ export default function NewsAnnouncements() {
                 </div>
 
                 {/* [FEATURE] Search Bar & Sort Filter */}
-                <div className="flex justify-between items-center py-2 space-x-4 sm:space-x-6 md:space-x-8 mb-4">
+                <div className="flex flex-wrap justify-between items-center py-2 space-x-4 sm:space-x-6 md:space-x-8 mb-4">
                     <SearchBar/>
-                    <SortFilter value={sortOption} onChange={setSortOption} />
+                    <div className="flex flex-2 sm:flex-1">
+                        <SortFilter value={sortOption} onChange={setSortOption} />
+                    </div>
                 </div>
 
                 {/* [SECTION] News Article Cards */}
