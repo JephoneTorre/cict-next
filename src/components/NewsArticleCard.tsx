@@ -20,9 +20,9 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
 
   return (
     <div className="flex md:flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow bg-white">
-      
+
       {/* Image */}
-      <div className="relative w-32 sm:w-42 md:w-full md:h-48 lg:h-56 flex-shrink-0">
+      <div className="relative w-32 sm:w-42 md:w-full md:h-48 lg:h-56 flex-shrink-0 hidden sm:block">
         {/* Skeleton */}
         {isLoading && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
@@ -44,17 +44,17 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imgSrc, date, header,
       {/* Content */}
       <div className="py-4 px-6 flex flex-col justify-between flex-1">
         <div className="space-y-1 md:space-y-3">
-            <p className="text-xs font-minor text-[#4D4D4D]/80">{date}</p>
-            <h3 className="text-lg sm:text-xl font-major font-bold">{header}</h3>
-            {description ? (
+          <p className="text-xs font-minor text-[#4D4D4D]/80">{date}</p>
+          <h3 className="text-lg sm:text-xl font-major font-bold">{header}</h3>
+          {description ? (
             <p className="hidden md:block text-sm font-minor text-[#000000]/60 line-clamp-3 leading-loose sm:leading-normal">
-                {description}
+              {description}
             </p>
-            ) : (
+          ) : (
             <p className="text-sm font-minor text-gray-400 italic line-clamp-3">
-                No summary provided
+              No summary provided
             </p>
-            )}
+          )}
         </div>
 
         {/* Read More Button */}
