@@ -70,7 +70,7 @@ export default function Contact() {
       </section>
 
       {/* INFO BOXES */}
-      <section className="w-full flex flex-wrap justify-center gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 mt-12">
+      <section className="w-full flex flex-wrap justify-center gap-x-6 gap-y-14 sm:gap-x-8 sm:gap-y-18 px-4 sm:px-6 lg:px-8 mt-22">
         {infoBoxes.map((box, i) => (
           <div
             key={i}
@@ -145,7 +145,7 @@ export default function Contact() {
                     )}
 
                     <button
-                      className="flex justify-between items-start gap-4 w-full py-2 sm:py-3 text-white font-semibold border-b border-neutral-700"
+                      className="flex justify-between items-start gap-4 w-full py-4 sm:py-5 text-white font-semibold border-b border-neutral-700"
                       onClick={() =>
                         setActiveFAQ(isOpen ? null : index)
                       }
@@ -252,7 +252,7 @@ export default function Contact() {
           </h2>
         </section>
 
-        <p className="text-lg font-minor text-[#363636] text-center mt-6 max-w-3xl mx-auto px-4">
+        <p className="text-lg font-minor text-[#363636] text-center mt-10 max-w-3xl mx-auto px-4">
           We love to hear from you! If you have any questions, comments, or feedback, you can email or call us.
         </p>
       </section>
